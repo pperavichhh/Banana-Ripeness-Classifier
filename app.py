@@ -6,17 +6,23 @@ import base64
 
 app = Flask(__name__)
 
+# Load the pre-trained model
 model = tf.keras.models.load_model('banan-v5.h5')
+
 
 def preprocess_image(image_path):
     img = image.load_img(image_path, target_size=(224, 224))
     img_array = image.img_to_array(img)
     img_array = np.expand_dims(img_array, axis=0)
-    return img_array / 255.0 
+    return img_array / 255.0  
 
 @app.route('/')
 def index():
     return render_template('index.html')
+
+@app.route('/authors')
+def authors():
+    return render_template('authors.html')
 
 @app.route('/predict', methods=['POST'])
 def predict():
@@ -25,9 +31,9 @@ def predict():
         image_path = 'temp_image.jpg'
         image_file.save(image_path)
         img_array = preprocess_image(image_path)
-        
         predictions = model.predict(img_array)
-        class_labels = ['overripe (สุกเกินไป)', 'ripe (สุก)', 'rotten (สุกงอม)', 'underripe (ยังไม่สุก )']
+
+        class_labels = ['overripe (สุกเกินไป)', 'ripe (สุก)', 'rotten (เน่า)', 'underripe (ยังไม่สุก )']
         predicted_class = class_labels[np.argmax(predictions)]
 
         result = {'class': predicted_class, 'confidence': float(predictions.max()) * 100}
