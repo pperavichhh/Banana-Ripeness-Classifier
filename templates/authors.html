@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
+    <title>Banana Ripeness Classifier | authors </title>
+    <style>
+        body{
+            font-family: 'Kanit', sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; 
+            margin: 0;
+
+        }
+        .footer {
+            background-color: #343a40; 
+            padding: 30px 0;
+            color: #fff; 
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+        }
+
+        .footer-column {
+            flex: 0 0 calc(33.3333% - 20px);
+            max-width: calc(33.3333% - 20px);
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+        <div class="container">
+            <a href="#" class="navbar-brand d-flex align-items-center">
+                <img src="/static/TUN_LOGO_GOLD.png" alt="Logo" width="40" height="50" class="align-text-top">
+                <span class="ml-2">Banana Classifier</span>
+            </a>
+            
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="navbar" class="collapse navbar-collapse">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a href="/" class="nav-link">หน้าแรก</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/authors" class="nav-link active">คณะผู้จัดทำ</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container mt-5">
+
+        <h1 class="text-center mb-4">คณะผู้จัดทำ</h1>
+
+        <div class="card mb-4">
+            <div class="row no-gutters">
+                <div class="col-md-4">
+                    <img src="static\10106509_0_20220527-151935.jpg" alt="Author 1" class="card-img" width="500" height="500">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h2 class="card-title">คุณครู คมกริช อุดารักษ์</h2>
+                        <p class="card-text">Email: <a href="maito:khomkrit@tun.ac.th">khomkrit@tun.ac.th</a></p>
+                        <h5 class="card-text">ครูที่ปรึกษาโครงงาน และ ครู <a class="text-primary"href="https://www.facebook.com/TUN.TAIProgram">โครงการห้องเรียนพิเศษเทคโนโลยีปัญญาประดิษฐ์ โรงเรียนเตรียมอุดมศึกษาน้อมเกล้า</a></h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card mb-4">
+            <div class="row no-gutters">
+                <div class="col-md-4">
+                    <img src="static\Manu.jpg" alt="Author 2" class="card-img">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h2 class="card-title">นาย พีรวิชญ์ เสมอพิทักษ์</h2>
+                        <p class="card-text">Email: <a href="maito:25150@tun.ac.th">25150@tun.ac.th</a></p>
+                        <h5 class="card-text">นักเรียน <a class="text-primary"href="https://www.facebook.com/TUN.TAIProgram">โครงการห้องเรียนพิเศษเทคโนโลยีปัญญาประดิษฐ์ โรงเรียนเตรียมอุดมศึกษาน้อมเกล้า</a></h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card mb-4">
+            <div class="row no-gutters">
+                <div class="col-md-4">
+                    <img src="static\Asia.jpg" alt="Author 3" class="card-img">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h2 class="card-title">นาย กิตติศักดิ์ ปานคง</h2>
+                        <p class="card-text">Email: <a href="mailto:24871@tun.ac.th">24871@tun.ac.th</a></p>
+                        <h5 class="card-text">นักเรียน <a class="text-primary"href="https://www.facebook.com/TUN.TAIProgram">โครงการห้องเรียนพิเศษเทคโนโลยีปัญญาประดิษฐ์ โรงเรียนเตรียมอุดมศึกษาน้อมเกล้า</a></h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card mb-4">
+            <div class="row no-gutters">
+                <div class="col-md-4">
+                    <img src="static\dream.jpg" alt="Author 4" class="card-img">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h2 class="card-title">นางสาว วนัชพร ทองเที่ยงดี</h2>
+                        <p class="card-text">Email: <a href="mailto:25219@tun.ac.th">25219@tun.ac.th</a></p>
+                        <h5 class="card-text">นักเรียน <a class="text-primary"href="https://www.facebook.com/TUN.TAIProgram">โครงการห้องเรียนพิเศษเทคโนโลยีปัญญาประดิษฐ์ โรงเรียนเตรียมอุดมศึกษาน้อมเกล้า</a></h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer bg-dark">
+        <div class="container">
+            <div class="footer-content">
+
+                <div class="footer-column">
+                    <h5>Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">หน้าแรก</a></li>
+                        <li><a href="#">คณะผู้จัดทำ</a></li>
+            
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h5>Contact Us</h5>
+                    <p>เลขที่ 78 ถนนรามคำแหง  แขวงราษฎร์พัฒนา  เขตสะพานสูง  กรุงเทพฯ 10240 </p>
+                    <p>โทร 02-373-1473</p>
+                </div>
+
+                <div class="footer-column">
+                    <h5>&copy;2024 T-AI PROGRAM TRIAMUDOMSUKSA NOMKLAO SCHOOL</h5>
+                    <p>All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and Popper.js scripts (required for Bootstrap components) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
